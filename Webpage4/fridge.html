@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wasted</title>
+	
+	
+	
+	
+	
+	<!-- The code below ports an old version of JQUERY with a datepicker widget -->
+	
+		  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>	
+		<div id="dropdown-nav">
+			<button class="drop"><img id="menu" src="images/menu.png" alt="Menu"></button>	
+			
+				<div id="dropdown-content">
+					<a href="index.html">Home</a>
+					<a href="about_us.html">About Us</a>
+					<a href="contact_us.html">Contact us</a>
+					<a href="fridge.html">My Fridge</a>
+					<a href="info.html">Information</a>
+				</div>
+		</div>
+		
+		<h1 id="title"> <a href="index.html"> <img id="logo" src="images/logo.png" alt="Logo"> </a> </h1>
+		
+		<div id="login">
+			<button id="signOutBtn"></button>
+		</div>
+		
+	</header>
+
+	
+	<div id="place_holder">	
+	
+		<table id="fridge">
+			<thead>
+					<tr>
+						<th>Name</th>
+						<th>Expiry Date</th>
+						<th>Remove</th>
+					</tr>
+			</thead>
+			
+			<tbody id =  "table_body">
+					
+				</tbody>
+			
+		</table>
+	</div>
+	
+	<form id="add_item" action="#">
+		
+		<input type ="image" id="add" src="images/add.png" alt="Add"  onclick ="submitClick()">
+		
+		<div id="add_form">
+			
+			<label for="item">Enter Item: </label>
+			<input type="text" id="itemName" name="item" placeholder="Item..">
+		
+			<th><label for="edate">Enter Expiration Date: </label>
+			<input type="text" id="datepicker" name="edate" placeholder="Date..">
+		</div>	
+		
+			<div id="remind">
+				<label for="remind">Remind Me: </label> <br>
+					<input type="radio" name="remind" value="1day">1 days before expiry date.<br>
+					<input type="radio" name="remind" value="2days">2 days before expiry date.<br>
+					<input type="radio" name="remind" value="3days">3 days before expiry date.<br>
+			</div>	
+			
+		
+			
+	</form>
+	
+	<footer>
+		<p>Copyright &copy; Wasted(G_40), 2017</p>
+	</footer>
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDaSug6WUrMPDSlcRO3OOU4yw0zXsJP3og",
+		authDomain: "fir-web-learn-6d987.firebaseapp.com",
+		databaseURL: "https://fir-web-learn-6d987.firebaseio.com",
+		projectId: "fir-web-learn-6d987",
+		storageBucket: "fir-web-learn-6d987.appspot.com",
+		messagingSenderId: "15555479095"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+ <!-- We comment out the new verison of JQUERY <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
+	
+	<script src = "index.js"> </script>
+
+</body>
+
+</html>
