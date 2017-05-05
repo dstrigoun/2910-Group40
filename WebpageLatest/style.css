@@ -1,0 +1,282 @@
+*{
+	margin:0;
+	padding:0;	
+}
+
+body {
+	font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+header {
+	background-color:#4CAF50;
+}
+/*css for the moblie nav bar*/
+
+button.drop {
+    height: 150px;
+    width: 150px;
+	background-image: url("menu.jpg");
+	padding: 34px 34px;
+}
+
+
+.drop {
+    background-color: #4CAF50;
+    color: black;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#dropdown-nav { 
+	height: 150px;
+    width: 150px;
+    position: relative;
+    display: inline-block;
+	border-right: 1px solid black;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	width: 400px;
+    height: 620px;
+}
+
+#dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	line-height: 100px;
+	font-size: 2em;
+	text-align: center;
+}
+
+#dropdown-content a:hover {background-color: #f1f1f1}
+
+#dropdown-nav:hover #dropdown-content {
+    display: block;
+}
+
+#dropdown-nav:hover .drop {
+    background-color: #3e8e41;
+}
+
+#title {
+    display:inline-block;
+	background-color:#4CAF50;
+	text-align: center;
+    width: 63%;
+}
+
+#title a {
+	text-decoration: none;
+	color: black;
+}
+
+#login{
+	float:right;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 1.25em;
+	margin-top: 39px;
+    margin-right: 32px;
+    border-radius: 61px;
+}
+
+.button {
+	text-decoration:none;
+	color:black;
+}
+
+/*css for the form*/
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+	font-size: 1.4em;
+}
+#login_form {
+    width: 38%;
+    float: left;
+	border-right: 1px solid black;
+	height: 646px;
+	padding-left: 90px;
+	text-align:left;
+}
+
+#sign_up{
+	padding-left: 474px;
+	text-align:left;
+}
+/*css for the pics*/
+#menu {
+    height: 80px;
+    width: 100%;
+}
+
+#home {
+	height: 100%;
+    width: 100%;
+}
+
+/*css for content*/
+
+#content {
+	width:100%;
+	padding-bottom:20px;
+
+}
+
+#content p {
+	text-align: center;
+	padding-top:10px;
+	
+}
+
+/*css for the footer*/
+
+footer {
+    width: 100%;
+    background-color: #4CAF50;
+    height: 100px;
+}
+
+footer p {
+    line-height: 100px;
+    text-align: center;
+	font-size:1.5em;
+}
+
+/*css for nav bar on info page*/
+#navigation {
+	width:100%;
+	position:relative;
+	display: block;
+}
+
+#navigation ul {
+	list-style-type: none;
+	background-color:black;
+	overflow: hidden;
+	
+}
+#navigation  li {
+	width: 160px;
+	height: 60px;
+	float: left;
+	border-right: 1px solid white;
+}
+#navigation  li a {
+	width: 100%;
+	height: 60px;
+	display: block;
+	line-height: 60px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.7em;
+	color: white;
+}
+
+/*css for the info page*/
+#info {
+	padding-top: 25px;
+}
+
+/*css for the fridge*/
+#fridge {
+	border-collapse: collapse;
+    width: 60%;
+	margin: 30px 20%;
+	font-size: 1.6em;
+}
+
+#fridge th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+#fridge td {
+	height: 70px;
+}
+
+#fridge th {
+	height: 23px;
+}
+
+#fridge tr:nth-child(even){
+	background-color: #f2f2f2
+}
+
+#fridge th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*css for add button*/
+#add {
+	height:108px;
+	width: 108px;
+	padding-left:222px;
+}
+
+#add_form {
+    float: right;
+    padding-right: 290px;
+    width: 350px;
+}
+
+#add_form label {
+	font-size: 1.4em;
+}
+
+#remind {
+	font-size: 1.4em;
+    width: 480px;
+    padding-top: 70px;
+    padding-left: 230px;
+	padding-bottom: 30px;
+}
+
+input[type="radio"] {
+    margin-left: 33px;
+    margin-bottom: 14px;
+	margin-right: 10px;
+}
+
+#logo {
+    height: 114px;
+    width: 380px;
+}
+

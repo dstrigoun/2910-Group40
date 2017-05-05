@@ -3,32 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Wasted</title>
-	
-	
-	
-	
-	
-	<!-- The code below ports an old version of JQUERY with a datepicker widget -->
-	
-		  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -49,8 +23,7 @@
 		<h1 id="title"> <a href="index.html"> <img id="logo" src="images/logo.png" alt="Logo"> </a> </h1>
 		
 		<div id="login">
-			<button id="signOutBtn"></button>
-			
+			<a href="form.html" class="button">Login/Sign in</a>
 		</div>
 		
 	</header>
@@ -84,7 +57,7 @@
 			<input type="text" id="itemName" name="item" placeholder="Item..">
 		
 			<th><label for="edate">Enter Expiration Date: </label>
-			<input type="text" id="datepicker" name="edate" placeholder="Date..">
+			<input type="text" id="expiryDate" name="edate" placeholder="Date..">
 		</div>	
 		
 			<div id="remind">
@@ -116,8 +89,8 @@
 	};
 	firebase.initializeApp(config);
 	</script>
-
- <!-- We comment out the new verison of JQUERY <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
+	
+	<script src = "http://code.jquery.com/jquery-3.1.0.js"></script>
 	
 	<script src = "index.js"> </script>
 
