@@ -2,7 +2,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
 
-   $("#signOutBtn").text("Logout");
+   $("#signOutBtn").text("Welcome " + firebase.auth().currentUser.email + ". Click to logout");
+  // document.getElementById("userWelcome").innerHTML = "Welcome! " + firebase.auth().currentUser.email;
 	
 	
 
@@ -16,7 +17,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   function(){
 
     
-	window.location = 'http://students.bcitdev.com/A00989687/Wasted/form.html'
+	window.location = 'http://students.bcitdev.com/A00541112/Webpage4/form.html'
 
 	
   }
@@ -69,16 +70,22 @@ firebaseRef.on("child_added", snap => {
 	var name = snap.child("name").val();
 	var expiry = snap.child("expiry").val();
 	var id = snap.key;
-
+	var childAuthor = snap.child("author").val();
+	var thisAuthor = firebase.auth().currentUser.uid;
+	
+	if (childAuthor == thisAuthor) {
 	var html = '<tr id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
 	
 	$(html).appendTo('#table_body');	
+	}
 	/*
 	
 	$("#table_body").append("<tr id =snap.key()><td>" + name + "</td><td>" + expiry + "</td><td><button>Remove</button></td></tr>" );
 	*/
 
+	
 });
+
 
 
 
@@ -96,6 +103,8 @@ $("#signOutBtn").click(
       // An error happened.
       alert(error.message);
     });
+
+	window.location.reload();
 	
   }
 );
