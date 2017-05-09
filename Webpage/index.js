@@ -54,6 +54,8 @@ var firebaseRef = firebase.database().ref();
 	var author = firebase.auth().currentUser.uid;
 	var email = firebase.auth().currentUser.email;
 	
+
+	
 	
 	firebaseRef.push({
 		'expiry': expiryText,
@@ -85,20 +87,53 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	var childAuthor = snap.child("author").val();
 	var thisAuthor = firebase.auth().currentUser.uid;
 
+	
+	var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 2;
+	var dddd = today.getDate() + 1;
 
+	if(dd<10) {
+		dd='0'+dd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	} 
+
+	today = mm + '/' + dd + '/' + yyyy;
+	todayAgain = mm + '/' + ddd + '/' + yyyy;
+	todayAgainAgain = mm + '/' + dddd + '/' + yyyy;
 
 	
 	
 	
 	if (childAuthor == thisAuthor) {
 	
-
+		if ( expiry <= today ) {
 	
 
-	var html = '<tr id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
+	var html = '<tr style="background-color: red;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
 	
 	$(html).appendTo('#table_body');
 	
+		} else if ( expiry == todayAgain || expiry == todayAgainAgain) {
+		
+	var html = '<tr style="background-color: yellow;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
+	
+	$(html).appendTo('#table_body');
+		
+		
+		}else {
+			
+	var html = '<tr id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
+	
+	$(html).appendTo('#table_body');
+			
+		}
 }
 
 
