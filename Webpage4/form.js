@@ -6,6 +6,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 	
 	window.location = 'http://students.bcitdev.com/A00541112/Webpage4/fridge.html'
 
+
   } else {
 
     
