@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     
 	
-	window.location = 'http://students.bcitdev.com/A00989687/WASTED2/Webpage4/form.html'
+	window.location = 'http://students.bcitdev.com/A00989687/WASTED2/Webpage4/index.html'
 
 	
   }
