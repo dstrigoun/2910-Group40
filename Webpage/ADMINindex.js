@@ -111,10 +111,11 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	
 	
 	
-	if (childAuthor == thisAuthor) {
+	
 	
 		if ( expiry <= today ) {
 	
+	emailjs.send("gmail","expiry",{name: "James", notes: "Check this out!"});
 
 	var html = '<tr style="background-color: red;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
 	
@@ -134,23 +135,7 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	$(html).appendTo('#table_body');
 			
 		}
-}
 
-
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-	/*
-	
-	$("#table_body").append("<tr id =snap.key()><td>" + name + "</td><td>" + expiry + "</td><td><button>Remove</button></td></tr>" );
-	*/
 
 	
 });
