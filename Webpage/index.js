@@ -6,6 +6,24 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
 
+	/*var childAuthor = snap.child("author").val();
+	var thisAuthor = firebase.auth().currentUser.uid;
+	var writeUsername;
+	
+	 firebaseRef.on("child_added", snap =>  { 
+			
+				var username = snap.child("username").val();
+				
+			
+			if (childAuthor == thisAuthor) {
+				writeUsername = username;
+			}
+			
+		
+		} 
+	
+	*/
+	
    $("#signOutBtn").text("Welcome " + firebase.auth().currentUser.email + ". Click to logout");
   // document.getElementById("userWelcome").innerHTML = "Welcome! " + firebase.auth().currentUser.email;
 	
@@ -178,10 +196,14 @@ function submitClick() {
 var itemName = document.getElementById("itemName");
 var expiryName = document.getElementById("datepicker");
 var firebaseRef = firebase.database().ref();	
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
 	
-	
-	
-	var itemText = itemName.value;
+	var itemText = capitalizeFirstLetter(itemName.value);
 	var expiryText = expiryName.value;
 	
 	var author = firebase.auth().currentUser.uid;
